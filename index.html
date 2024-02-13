@@ -28,14 +28,20 @@
         border-radius: 100%;
         margin-top: 20px;
     }
-    #message {
+    #message-container {
         display: none;
-        font-size: 17px;
+        width: 320px;
+        margin: 0 auto;
+        overflow-y: auto;
+    }
+    #message {
+        font-size: 14px;
         background: deeppink;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         margin-top: 20px;
         font-weight:bold;
+        padding: 10px;
     }
     .love-btn {
         padding: 10px 20px;
@@ -82,7 +88,11 @@
     <button class="love-btn" id="show-hidden-btn"><i class="fas fa-heart"></i> Click Here To See The Magic😊</button>
     <audio id="sound" src="rewrite the stars.mp3"></audio>
     <img id="crush-pic" src="IMG_20211126_082652.jpg" alt="Picture of My Crush">
-    <div id="message" style="display: none;">Happy Hearts Day Sha!💙 Sorry, eto lang ang kinaya ko hihi.<br> Thank you for always encouraging me. <br>Hindi mo man alam, isa ka sa mga nagbibigay sa akin ng encouragement. <br>Sorry kung madalas iniiwasan kita at madalas akong nagme-message sayo. <br>Alam mo ba, to be honest, gusto kita kamustahin palagi kaso nahihiya ako. <br>Parang feel ko kasi hindi mo ako kakausapin,<br>hindi ko kasi alam kung paano kita kamustahin.<br> Minsan sa chat lang, minsan hindi mo pa nakikita kasi maraming nagme-message sayo at agad kang natatambakan ng messages. <br>Pero gusto ko talagang subukan na kamustahin ka. I pray na lahat ng hopes and dreams mo ay matupad mo, at wag kang magbago. Narito lang ako palagi bilang kaibigan mo.<br> Take care, and God bless you always. Your friend - Yvan</div>
+    <div id="message-container">
+        <div id="message">
+            Happy Hearts Day Sha!💙 Sorry, eto lang ang kinaya ko hihi.<br> Thank you for always encouraging me. <br>Hindi mo man alam, isa ka sa mga nagbibigay sa akin ng encouragement. <br>Sorry kung madalas iniiwasan kita at madalas akong nagme-message sayo. <br>Alam mo ba, to be honest, gusto kita kamustahin palagi kaso nahihiya ako. <br>Parang feel ko kasi hindi mo ako kakausapin,<br>hindi ko kasi alam kung paano kita kamustahin.<br> Minsan sa chat lang, minsan hindi mo pa nakikita kasi maraming nagme-message sayo at agad kang natatambakan ng messages. <br>Pero gusto ko talagang subukan na kamustahin ka. I pray na lahat ng hopes and dreams mo ay matupad mo, at wag kang magbago. Narito lang ako palagi bilang kaibigan mo.<br> Take care, and God bless you always. Your friend - Yvan
+        </div>
+    </div>
     <button class="hidden-btn" id="open-link-btn">Tap mo to sha</button>
 
     <script>
@@ -91,7 +101,7 @@
             document.getElementById("open-link-btn").style.display = "block";
             // Display the image and message
             document.getElementById("crush-pic").style.display = "block";
-            document.getElementById("message").style.display = "block";
+            document.getElementById("message-container").style.display = "block";
             // Hide the first button
             document.getElementById("show-hidden-btn").style.display = "none";
             // Play the sound
